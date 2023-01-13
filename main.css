@@ -1,0 +1,107 @@
+* {
+	box-sizing: border-box;
+	text-transform: capitalize;
+}
+:root {
+	--main-transition: 1.5s;
+}
+.container {
+	margin: auto;
+	padding: 40px;
+	background-image: linear-gradient(330deg, #58549e, #6ebe81, #c1df6d, #ededed);
+}
+.container > .form {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 20px;
+	background: #ddd;
+	padding: 10px;
+	margin: auto;
+}
+input[type="submit"],
+button.del {
+	color: white;
+	background: orange;
+	border-radius: 20px;
+	border: 1px solid white;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.container > .form > #title {
+	padding: 20px;
+	border-radius: 20px;
+	border-color: orange;
+	outline: none;
+	flex-basis: 50%;
+}
+.container > .form > #sub {
+	padding: 0px 20px;
+}
+.container > .task {
+	margin: 20px auto;
+	padding: 5px 10px;
+}
+.container > .task > .mytask {
+	position: relative;
+	padding: 5px 10px;
+	background: #ddd;
+	margin: 10px;
+}
+.container > .task > .mytask > p {
+	background: white;
+	border-radius: 15px;
+	padding: 20px 85px 20px 10px;
+	word-break: break-word;
+	transition: var(--main-transition);
+}
+.container > .task > .mytask > p > .del {
+	padding: 5px 15px;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: var(--main-transition);
+}
+.nav {
+	position: relative;
+	margin-top: -40px;
+}
+.top,
+.bottom {
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	right: 10px;
+	background-color: olivedrab;
+	border-radius: 50%;
+	outline: none;
+	font-size: 26px;
+	letter-spacing: -11px;
+	border: 1px solid white;
+	transform: rotate(90deg);
+	color: white;
+	padding: 0px 10px 0 0;
+	bottom: 40px;
+	display: none;
+}
+.top {
+	bottom: 80px;
+	transform: rotate(-90deg);
+}
+.clear {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: red;
+	color: white;
+	padding: 15px 25px;
+	border: 1px solid white;
+	border-radius: 30%;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-size: 16px;
+	display: none;
+}
